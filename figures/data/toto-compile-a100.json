@@ -1,0 +1,308 @@
+{
+  "points": {
+    "assetops-c2048-h96-b1-window-0-k1": {
+      "whole": {
+        "requests": 200,
+        "req_per_s": 18.65887820556043,
+        "p50_ms": 53.309583498048596,
+        "p95_ms": 55.054159807332326,
+        "peak_nvml_mib": 2452.5625,
+        "peak_alloc_mib": 1311.67236328125,
+        "request_per_s_by_block": [
+          18.84893674594732,
+          18.47261421926957
+        ],
+        "first_shape_s": [
+          31.66164879500866,
+          20.972604943002807
+        ],
+        "start_to_ready_s": [
+          56.14782714800094,
+          33.0758335290011
+        ],
+        "additional_graphs_warmup_and_sampling_combined": [
+          1,
+          0
+        ]
+      },
+      "core": {
+        "requests": 200,
+        "req_per_s": 10.376286527809247,
+        "p50_ms": 95.88039299705997,
+        "p95_ms": 98.3923339546891,
+        "peak_nvml_mib": 2456.5625,
+        "peak_alloc_mib": 1313.1533203125,
+        "request_per_s_by_block": [
+          10.457607999364486,
+          10.296220056916866
+        ],
+        "first_shape_s": [
+          7.337335627002176,
+          3.3802115400030743
+        ],
+        "start_to_ready_s": [
+          33.07418865401996,
+          33.077657285990426
+        ],
+        "additional_graphs_warmup_and_sampling_combined": [
+          0,
+          0
+        ]
+      },
+      "eager": {
+        "requests": 200,
+        "req_per_s": 13.277905760285368,
+        "p50_ms": 74.57668549614027,
+        "p95_ms": 78.6300960709923,
+        "peak_nvml_mib": 2416.5625,
+        "peak_alloc_mib": 1312.6298828125,
+        "request_per_s_by_block": [
+          13.13956626079417,
+          13.419189261518989
+        ],
+        "first_shape_s": [
+          0.36922429798869416,
+          0.07715658700908534
+        ],
+        "start_to_ready_s": [
+          33.07542034101789,
+          33.575534839998
+        ],
+        "additional_graphs_warmup_and_sampling_combined": [
+          0,
+          0
+        ]
+      }
+    },
+    "assetops-c2048-h96-b1-window-0-k4": {
+      "whole": {
+        "requests": 200,
+        "req_per_s": 20.899798166141213,
+        "p50_ms": 190.44422698789276,
+        "p95_ms": 195.07980206835782,
+        "peak_nvml_mib": 2452.5625,
+        "peak_alloc_mib": 1311.67236328125,
+        "request_per_s_by_block": [
+          21.09332798913241,
+          20.709787302379944
+        ],
+        "first_shape_s": [
+          31.66164879500866,
+          20.972604943002807
+        ],
+        "start_to_ready_s": [
+          56.14782714800094,
+          33.0758335290011
+        ],
+        "additional_graphs_warmup_and_sampling_combined": [
+          0,
+          0
+        ]
+      },
+      "core": {
+        "requests": 200,
+        "req_per_s": 11.135266859120804,
+        "p50_ms": 357.85977249906864,
+        "p95_ms": 367.05104120483156,
+        "peak_nvml_mib": 2456.5625,
+        "peak_alloc_mib": 1313.1533203125,
+        "request_per_s_by_block": [
+          11.229031558303694,
+          11.043055101210182
+        ],
+        "first_shape_s": [
+          7.337335627002176,
+          3.3802115400030743
+        ],
+        "start_to_ready_s": [
+          33.07418865401996,
+          33.077657285990426
+        ],
+        "additional_graphs_warmup_and_sampling_combined": [
+          0,
+          0
+        ]
+      },
+      "eager": {
+        "requests": 200,
+        "req_per_s": 14.598250913094608,
+        "p50_ms": 272.92951798881404,
+        "p95_ms": 282.1139435574878,
+        "peak_nvml_mib": 2416.5625,
+        "peak_alloc_mib": 1312.6298828125,
+        "request_per_s_by_block": [
+          14.624106848615545,
+          14.572486244618034
+        ],
+        "first_shape_s": [
+          0.36922429798869416,
+          0.07715658700908534
+        ],
+        "start_to_ready_s": [
+          33.07542034101789,
+          33.575534839998
+        ],
+        "additional_graphs_warmup_and_sampling_combined": [
+          0,
+          0
+        ]
+      }
+    },
+    "assetops-c512-h96-b4-window-0-k1": {
+      "whole": {
+        "requests": 200,
+        "req_per_s": 17.70468556343553,
+        "p50_ms": 56.064200995024294,
+        "p95_ms": 58.53823944780743,
+        "peak_nvml_mib": 2452.5625,
+        "peak_alloc_mib": 1312.0986328125,
+        "request_per_s_by_block": [
+          17.494704336349795,
+          17.919768650174987
+        ],
+        "first_shape_s": [
+          21.72083698399365,
+          31.052148945018416
+        ],
+        "start_to_ready_s": [
+          56.14782714800094,
+          33.0758335290011
+        ],
+        "additional_graphs_warmup_and_sampling_combined": [
+          0,
+          1
+        ]
+      },
+      "core": {
+        "requests": 200,
+        "req_per_s": 10.194307052793105,
+        "p50_ms": 97.93367350357585,
+        "p95_ms": 100.39057579560904,
+        "peak_nvml_mib": 2456.5625,
+        "peak_alloc_mib": 1314.48046875,
+        "request_per_s_by_block": [
+          10.291708409573493,
+          10.098732036193162
+        ],
+        "first_shape_s": [
+          3.3330474289832637,
+          7.413532781007234
+        ],
+        "start_to_ready_s": [
+          33.07418865401996,
+          33.077657285990426
+        ],
+        "additional_graphs_warmup_and_sampling_combined": [
+          0,
+          0
+        ]
+      },
+      "eager": {
+        "requests": 200,
+        "req_per_s": 12.977420756790465,
+        "p50_ms": 76.72184400144033,
+        "p95_ms": 79.03379040071741,
+        "peak_nvml_mib": 2416.5625,
+        "peak_alloc_mib": 1313.88671875,
+        "request_per_s_by_block": [
+          13.040275428043804,
+          12.915169103238764
+        ],
+        "first_shape_s": [
+          0.08763418500893749,
+          0.37124447998940013
+        ],
+        "start_to_ready_s": [
+          33.07542034101789,
+          33.575534839998
+        ],
+        "additional_graphs_warmup_and_sampling_combined": [
+          0,
+          0
+        ]
+      }
+    },
+    "assetops-c512-h96-b4-window-0-k4": {
+      "whole": {
+        "requests": 200,
+        "req_per_s": 20.72868736225683,
+        "p50_ms": 192.62680399697274,
+        "p95_ms": 196.36311299836962,
+        "peak_nvml_mib": 2452.5625,
+        "peak_alloc_mib": 1312.0986328125,
+        "request_per_s_by_block": [
+          20.512477115137514,
+          20.949504059543894
+        ],
+        "first_shape_s": [
+          21.72083698399365,
+          31.052148945018416
+        ],
+        "start_to_ready_s": [
+          56.14782714800094,
+          33.0758335290011
+        ],
+        "additional_graphs_warmup_and_sampling_combined": [
+          0,
+          0
+        ]
+      },
+      "core": {
+        "requests": 200,
+        "req_per_s": 10.98395619108979,
+        "p50_ms": 362.8229745227145,
+        "p95_ms": 373.36969430180034,
+        "peak_nvml_mib": 2456.5625,
+        "peak_alloc_mib": 1314.48046875,
+        "request_per_s_by_block": [
+          10.992831038866111,
+          10.975095661624442
+        ],
+        "first_shape_s": [
+          3.3330474289832637,
+          7.413532781007234
+        ],
+        "start_to_ready_s": [
+          33.07418865401996,
+          33.077657285990426
+        ],
+        "additional_graphs_warmup_and_sampling_combined": [
+          0,
+          0
+        ]
+      },
+      "eager": {
+        "requests": 200,
+        "req_per_s": 14.494223201922834,
+        "p50_ms": 272.9203894996317,
+        "p95_ms": 285.96999115543434,
+        "peak_nvml_mib": 2416.5625,
+        "peak_alloc_mib": 1313.88671875,
+        "request_per_s_by_block": [
+          14.612950279142877,
+          14.37740984009639
+        ],
+        "first_shape_s": [
+          0.08763418500893749,
+          0.37124447998940013
+        ],
+        "start_to_ready_s": [
+          33.07542034101789,
+          33.575534839998
+        ],
+        "additional_graphs_warmup_and_sampling_combined": [
+          0,
+          0
+        ]
+      }
+    }
+  },
+  "independent_native_forecast_sha256": {
+    "assetops-c2048-h96-b1-window-0": "1425160b5e95d19a5c2b56823e43c3f0353e0782d33c4d997fd085da3f75a182",
+    "assetops-c512-h96-b4-window-0": "d9a2beac6d46e8c0de3cbb2517dfca3478fb056fca6efcb5227d61e988193b80"
+  },
+  "payload_sha256": {
+    "assetops-c2048-h96-b1-window-0": "bed458f8beec4fedc819c0dc226cbad5cd44c84c326bbb37b08ade02d273e686",
+    "assetops-c512-h96-b4-window-0": "08f3e2d7d4be1bfbbce00904f17aafc514025fa48b4bc8bd874a8ec5c6a2836d"
+  }
+}

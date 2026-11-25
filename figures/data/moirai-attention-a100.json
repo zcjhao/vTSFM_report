@@ -1,0 +1,137 @@
+{
+  "hardware": "NVIDIA A100-SXM4-40GB",
+  "runtime": "2e13348b61a9ffe4c12ac29e5963c4bc69533668",
+  "tolerance": {
+    "rtol": 0.0001,
+    "atol": 0.0001
+  },
+  "horizon_1024": {
+    "fused_parity": {
+      "checked": 73728,
+      "outside": 450,
+      "max_abs": 0.003894329071044922,
+      "max_multiple_of_tolerance": 8.710537874969392,
+      "failures_by_64_step_block": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        33,
+        89,
+        118,
+        56,
+        66,
+        64,
+        24
+      ],
+      "failures_by_row": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        450
+      ]
+    },
+    "upstream_parity": {
+      "case": "metropt-b8-c7168-h1024",
+      "series": 8,
+      "prediction_length": 1024,
+      "quantile_levels": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9
+      ],
+      "compared_values": 73728,
+      "max_abs_error": 0.0,
+      "max_rel_error": 0.0,
+      "rtol": 0.0001,
+      "atol": 0.0001
+    },
+    "upstream_only_p95_ms": 2051.247760350816,
+    "fused_speedup": null
+  },
+  "horizon_96": {
+    "fused_parity": {
+      "checked": 6912,
+      "outside": 0,
+      "max_abs": 1.52587890625e-05,
+      "max_multiple_of_tolerance": 0.023808699143130586,
+      "failures_by_64_step_block": [
+        0,
+        0
+      ],
+      "failures_by_row": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "modes": {
+      "upstream": {
+        "samples": 200,
+        "p50_ms": 171.48609600553755,
+        "p95_ms": 175.7177630919614,
+        "peak_allocated_gib": 1.4835362434387207,
+        "runs": [
+          {
+            "run": "short-0-1795600224",
+            "p50_ms": 169.80159598460887,
+            "p95_ms": 173.0293984990567,
+            "peak_allocated_gib": 1.4835362434387207,
+            "ownership_checks": 921
+          },
+          {
+            "run": "short-3-1795601287",
+            "p50_ms": 173.0832909961464,
+            "p95_ms": 175.9368009501486,
+            "peak_allocated_gib": 1.4835362434387207,
+            "ownership_checks": 913
+          }
+        ]
+      },
+      "univariate": {
+        "samples": 200,
+        "p50_ms": 119.98847700306214,
+        "p95_ms": 122.55637745984131,
+        "peak_allocated_gib": 0.6390500068664551,
+        "runs": [
+          {
+            "run": "short-1-1795600737",
+            "p50_ms": 119.34159848897252,
+            "p95_ms": 121.81012634246144,
+            "peak_allocated_gib": 0.6390500068664551,
+            "ownership_checks": 675
+          },
+          {
+            "run": "short-2-1795601119",
+            "p50_ms": 120.61738049669657,
+            "p95_ms": 123.1599826409365,
+            "peak_allocated_gib": 0.6390500068664551,
+            "ownership_checks": 680
+          }
+        ]
+      }
+    },
+    "case_sha256": "6f2944367d12244cec6d59006ae2406b5ae52196b544254bbfdf8baefabf3ea7",
+    "reference_sha256": "14cc72360ebec4e67240ce06a19136ad9f80d65a462350f2c52e3bd4fb8e48da"
+  }
+}

@@ -1,6 +1,18 @@
 # vTSFM presentation figures
 
-Each figure is available as a vector PDF for the paper and as a 2,112 × 1,089 PNG for slides. The tables below use previously published experiments. The revision, device and measurement boundary matter when comparing results.
+Each figure is available as a vector PDF for the paper and a high-resolution PNG for slides. The November 25 experiments use the same A100 and name the serving revision for each comparison. Earlier figures keep their original device, workload and baseline.
+
+For the presentation, start with the cost of serving an individual forecast, then introduce concurrent arrivals to show when requests can share a model call. Next compare two ways to reduce execution overhead, TimesFM CUDA graph replay and Toto whole-forecast compilation. Close with Moirai to show why faster kernels and finer scheduling still need independent numerical checks on the actual workload.
+
+## November 25 A100 experiments
+
+| Figure | What was measured | Evidence |
+| --- | --- | --- |
+| [Toto compilation](07-toto-compile-a100.pdf) · [PNG](07-toto-compile-a100.png) | Eager, guarded compile and whole-forecast compile at `6ddddef` on top of `2e13348`. The same two MetroPT input geometries, one or four outstanding clients, six fresh servers and 2,400 completed HTTP requests. The x-axis gives series per request × observations per series, then client count. Per-shape specialization is excluded from the warm timings. The independent CUDA output hashes and the measurements for each of two orders are included. | [Timing and memory measurements](data/toto-compile-a100.json) |
+| [Moirai attention by forecast horizon](08-moirai-attention-a100.pdf) · [PNG](08-moirai-attention-a100.png) | Same B8/C7168 MetroPT histories on `2e13348`, one server slot. H96 pooled p95 over 200 requests per arm, with independent numerical checks before and after every timing run. At H1024, fused attention exceeded the native tolerance on one series, beginning in block 10. The upstream arm passed all 73,728 values. The right panel shows the failed values per block. | [Timings and error distribution](data/moirai-attention-a100.json) |
+| [Moirai block scheduling](09-moirai-block-scheduling.pdf) · [PNG](09-moirai-block-scheduling.png) | Four slots on `bbf77ea`. The saturated burst sends B2/C512/H1024 every millisecond. The mixed burst sends 16 requests every 250 ms at horizons 128, 129, 513 and 1,024. The scheduler preserves each request’s native row grouping. All 800 timed requests passed transport and identity checks. All 160 separate concurrent warmups passed native parity. | [Per-order timings, memory and parity](data/moirai-blocks-a100.json) |
+
+## Earlier experiments
 
 | Figure | What was measured | Evidence |
 | --- | --- | --- |
@@ -11,4 +23,4 @@ Each figure is available as a vector PDF for the paper and as a 2,112 × 1,089 P
 | [TimesFM block scheduling](05-timesfm-blocks.pdf) · [PNG](05-timesfm-blocks.png) | Two campaigns replayed the same 100-request MetroPT burst, four slots, B2/C512/H1024. The right panel has six counterbalanced arm orders. All 1,800 responses passed nine-quantile parity. | [Decode/prefill ablation](https://github.com/vinli0921/vTSFM/issues/51#combined-timesfm-h1024-results-from-prs-80-and-81) · [Final comparison](https://github.com/vinli0921/vTSFM/pull/83) |
 | [Toto inference fast path](06-toto-runtime.pdf) · [PNG](06-toto-runtime.png) | B4/C128/H96 served over one vLLM slot on an A100, with one or four clients. Each arm combines 200 completed requests per client count. The candidate includes inference-only unit scaling and concurrent-call isolation. | [Combined A100 comparison](https://github.com/vinli0921/vTSFM/pull/94) |
 
-`measurements.json` contains the plotted values in their original units and links to the source experiments. To recreate the exports with Python and Matplotlib, run `python render.py` from this directory. The IEEE template can include a vector figure with `\includegraphics[width=\linewidth]{figures/02-timesfm-cuda-graphs.pdf}`.
+The `data/` directory contains the November 25 measurements. [measurements.json](measurements.json) contains the earlier values and source links. From this directory, run `python render.py` for the earlier figures and `python current.py` for the November 25 figures using Python and Matplotlib. The IEEE template can include a vector figure with `\includegraphics[width=\linewidth]{figures/02-timesfm-cuda-graphs.pdf}`.

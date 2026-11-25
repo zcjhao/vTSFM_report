@@ -1,0 +1,310 @@
+{
+  "source": "bbf77ea2d2779d36eb1b7f8d1bb24e947a293a0e",
+  "hardware": {
+    "index": 0,
+    "uuid": "GPU-47ed29f3-0968-822a-3452-e316f26f0a01",
+    "name": "NVIDIA A100-SXM4-40GB",
+    "driver": "595.91.07",
+    "total_memory_bytes": 42949672960
+  },
+  "software": {
+    "torch": "2.14.0+cu130",
+    "vllm": "0.33.0",
+    "uni2ts": "2.0.0"
+  },
+  "settings": "eager FP32, TF32 disabled, async scheduling disabled",
+  "workload": {
+    "saturated": {
+      "interval_ms": 1,
+      "case_pattern": [
+        3
+      ]
+    },
+    "bursty": {
+      "burst_size": 16,
+      "burst_interval_ms": 250,
+      "case_pattern": [
+        3,
+        0,
+        3,
+        1,
+        2,
+        1,
+        2,
+        0
+      ]
+    },
+    "cases": {
+      "0": {
+        "rows": 1,
+        "context": 128,
+        "horizon": 128,
+        "payload_sha256": "22419b0ca5d740e0010d0dd759b61e10cd10eb97dd8e5b03864ea14bac15330a"
+      },
+      "1": {
+        "rows": 2,
+        "context": 128,
+        "horizon": 513,
+        "payload_sha256": "e5b4976d2d4becf7cf65376dd9fa6b5501746c3ecf1a44a0961b8e363255adce"
+      },
+      "2": {
+        "rows": 1,
+        "context": 512,
+        "horizon": 129,
+        "payload_sha256": "f8a29b40f56237839c5a27241d3db826f51208c1f7f3e4e715e0add4c16c4f39"
+      },
+      "3": {
+        "rows": 2,
+        "context": 512,
+        "horizon": 1024,
+        "payload_sha256": "2faaa451ee4798b8ad70c95a0bf64cbe6fddf81ca4c4cd52b17151998e4a7c10"
+      }
+    }
+  },
+  "method": "100 timed requests per scenario/mode/repetition; two reversed server orders. Throughput total completions / sum of replay elapsed times; p95 over 200 offered-arrival to completion durations; reported memory peaks are maxima over the two cells. Allocated/reserved from warm worker Torch counters, NVML sampled separately every 20 ms.",
+  "concurrent_native_checked": 160,
+  "concurrent_native_passed": 160,
+  "model": "Salesforce/moirai-2.0-R-small",
+  "checkpoint": "30f43ff08c8494f4943ae1521e9d4e94a0fbb389",
+  "concurrent_parity": {
+    "ab,whole,saturated": {
+      "samples_passed": 20,
+      "samples_checked": 20,
+      "max_abs_of_passing": 5.9604644775390625e-06,
+      "first_failure": null
+    },
+    "ab,whole,bursty": {
+      "samples_passed": 20,
+      "samples_checked": 20,
+      "max_abs_of_passing": 0.0,
+      "first_failure": null
+    },
+    "ab,continuous,saturated": {
+      "samples_passed": 20,
+      "samples_checked": 20,
+      "max_abs_of_passing": 0.0,
+      "first_failure": null
+    },
+    "ab,continuous,bursty": {
+      "samples_passed": 20,
+      "samples_checked": 20,
+      "max_abs_of_passing": 0.0,
+      "first_failure": null
+    },
+    "ba,whole,saturated": {
+      "samples_passed": 20,
+      "samples_checked": 20,
+      "max_abs_of_passing": 5.9604644775390625e-06,
+      "first_failure": null
+    },
+    "ba,whole,bursty": {
+      "samples_passed": 20,
+      "samples_checked": 20,
+      "max_abs_of_passing": 0.00010919570922851562,
+      "first_failure": null
+    },
+    "ba,continuous,saturated": {
+      "samples_passed": 20,
+      "samples_checked": 20,
+      "max_abs_of_passing": 0.0,
+      "first_failure": null
+    },
+    "ba,continuous,bursty": {
+      "samples_passed": 20,
+      "samples_checked": 20,
+      "max_abs_of_passing": 0.0,
+      "first_failure": null
+    }
+  },
+  "comparison_qualified": {
+    "saturated": true,
+    "bursty": true
+  },
+  "gpu_ownership_checks": {
+    "direct": 266,
+    "lifecycle": 1224,
+    "perf-ab": 2896,
+    "perf-ba": 2901,
+    "oracle": 190
+  },
+  "exact_payload_native_gate_max_abs": 0,
+  "workflow_native_values": 258761,
+  "workflow_native_max_abs": 0.0,
+  "maximum_wave_resident_allocated_bytes": 54461440,
+  "maximum_wave_peak_allocated_bytes": 1952331776,
+  "maximum_wave_peak_reserved_bytes": 2246049792,
+  "correctness_scope": "Fresh native reference for each distinct untimed single input and all 20 concurrent warmup responses per arm/scenario/repetition. Timing checks HTTP status and routing only. Compare only scenarios passing all concurrent gates.",
+  "completed": 800,
+  "profiles": [
+    {
+      "mode": "whole",
+      "scenario": "saturated",
+      "paired_comparison_qualified": true,
+      "completed": 200,
+      "pooled_rps": 11.330376176341758,
+      "peak_torch_allocated_bytes": 188519936,
+      "peak_torch_reserved_bytes": 335544320,
+      "peak_nvml_resident_bytes": 1439236096,
+      "cases_completed": {
+        "case-3-b2-c512-h1024": 200
+      },
+      "p95_offered_ms": 8362.030850362753,
+      "p95_by_case_ms": {
+        "case-3-b2-c512-h1024": 8362.030850362753
+      }
+    },
+    {
+      "mode": "whole",
+      "scenario": "bursty",
+      "paired_comparison_qualified": true,
+      "completed": 200,
+      "pooled_rps": 8.294231871968082,
+      "peak_torch_allocated_bytes": 120794624,
+      "peak_torch_reserved_bytes": 335544320,
+      "peak_nvml_resident_bytes": 1439236096,
+      "cases_completed": {
+        "case-3-b2-c512-h1024": 52,
+        "case-0-b1-c128-h128": 50,
+        "case-1-b2-c128-h513": 50,
+        "case-2-b1-c512-h129": 48
+      },
+      "p95_offered_ms": 10221.908113505924,
+      "p95_by_case_ms": {
+        "case-3-b2-c512-h1024": 10107.20830338978,
+        "case-0-b1-c128-h128": 10320.050191547489,
+        "case-1-b2-c128-h513": 10223.361076644505,
+        "case-2-b1-c512-h129": 9945.458541889093
+      }
+    },
+    {
+      "mode": "continuous",
+      "scenario": "saturated",
+      "paired_comparison_qualified": true,
+      "completed": 200,
+      "pooled_rps": 3.8089310637444185,
+      "peak_torch_allocated_bytes": 89503232,
+      "peak_torch_reserved_bytes": 111149056,
+      "peak_nvml_resident_bytes": 1214840832,
+      "cases_completed": {
+        "case-3-b2-c512-h1024": 200
+      },
+      "p95_offered_ms": 25295.02638806902,
+      "p95_by_case_ms": {
+        "case-3-b2-c512-h1024": 25295.02638806902
+      }
+    },
+    {
+      "mode": "continuous",
+      "scenario": "bursty",
+      "paired_comparison_qualified": true,
+      "completed": 200,
+      "pooled_rps": 7.862463436695249,
+      "peak_torch_allocated_bytes": 89503232,
+      "peak_torch_reserved_bytes": 111149056,
+      "peak_nvml_resident_bytes": 1214840832,
+      "cases_completed": {
+        "case-3-b2-c512-h1024": 52,
+        "case-0-b1-c128-h128": 50,
+        "case-1-b2-c128-h513": 50,
+        "case-2-b1-c512-h129": 48
+      },
+      "p95_offered_ms": 10723.332833399763,
+      "p95_by_case_ms": {
+        "case-3-b2-c512-h1024": 11178.105006589612,
+        "case-0-b1-c128-h128": 10579.513523862988,
+        "case-1-b2-c128-h513": 10700.024428396136,
+        "case-2-b1-c512-h129": 10107.57933514833
+      }
+    }
+  ],
+  "pairs": [
+    {
+      "pair": "ab",
+      "mode": "whole",
+      "scenario": "saturated",
+      "rps": 11.246671593786584,
+      "elapsed_wall_s": 8.89151951900567,
+      "peak_torch_reserved_bytes": 335544320,
+      "peak_nvml_resident_bytes": 1439236096,
+      "offered_p95_ms": 8476.594799967692,
+      "peak_torch_allocated_bytes": 188519936
+    },
+    {
+      "pair": "ab",
+      "mode": "whole",
+      "scenario": "bursty",
+      "rps": 8.38863684853441,
+      "elapsed_wall_s": 11.920887958985986,
+      "peak_torch_reserved_bytes": 335544320,
+      "peak_nvml_resident_bytes": 1439236096,
+      "offered_p95_ms": 10217.952121984854,
+      "peak_torch_allocated_bytes": 120794624
+    },
+    {
+      "pair": "ab",
+      "mode": "continuous",
+      "scenario": "saturated",
+      "rps": 3.8314361482679784,
+      "elapsed_wall_s": 26.09987381499377,
+      "peak_torch_reserved_bytes": 111149056,
+      "peak_nvml_resident_bytes": 1214840832,
+      "offered_p95_ms": 24977.28139009293,
+      "peak_torch_allocated_bytes": 89503232
+    },
+    {
+      "pair": "ab",
+      "mode": "continuous",
+      "scenario": "bursty",
+      "rps": 7.878345720340483,
+      "elapsed_wall_s": 12.693020025995793,
+      "peak_torch_reserved_bytes": 111149056,
+      "peak_nvml_resident_bytes": 1214840832,
+      "offered_p95_ms": 10672.446829944965,
+      "peak_torch_allocated_bytes": 89503232
+    },
+    {
+      "pair": "ba",
+      "mode": "whole",
+      "scenario": "saturated",
+      "rps": 11.415336062640765,
+      "elapsed_wall_s": 8.76014507599757,
+      "peak_torch_reserved_bytes": 335544320,
+      "peak_nvml_resident_bytes": 1439236096,
+      "offered_p95_ms": 8344.773298114585,
+      "peak_torch_allocated_bytes": 188519936
+    },
+    {
+      "pair": "ba",
+      "mode": "whole",
+      "scenario": "bursty",
+      "rps": 8.201928099140751,
+      "elapsed_wall_s": 12.19225513699348,
+      "peak_torch_reserved_bytes": 335544320,
+      "peak_nvml_resident_bytes": 1439236096,
+      "offered_p95_ms": 10497.810998940258,
+      "peak_torch_allocated_bytes": 120794624
+    },
+    {
+      "pair": "ba",
+      "mode": "continuous",
+      "scenario": "saturated",
+      "rps": 3.786688816041049,
+      "elapsed_wall_s": 26.4082962340035,
+      "peak_torch_reserved_bytes": 111149056,
+      "peak_nvml_resident_bytes": 1214840832,
+      "offered_p95_ms": 25302.12640294746,
+      "peak_torch_allocated_bytes": 89503232
+    },
+    {
+      "pair": "ba",
+      "mode": "continuous",
+      "scenario": "bursty",
+      "rps": 7.846645059725541,
+      "elapsed_wall_s": 12.744300174003001,
+      "peak_torch_reserved_bytes": 111149056,
+      "peak_nvml_resident_bytes": 1214840832,
+      "offered_p95_ms": 10723.332833399763,
+      "peak_torch_allocated_bytes": 89400832
+    }
+  ]
+}
