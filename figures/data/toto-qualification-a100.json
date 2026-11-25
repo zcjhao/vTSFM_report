@@ -1,0 +1,1391 @@
+{
+  "source": "6ddddeff15dea3acd90c11597a9a93507ddb8cbf",
+  "raw_qualification_sha256": "0f773fa5bcd2696e84cbaafc84775d1475779264d101df49fb60668e79de735a",
+  "raw_archive": "toto-qualified-6ddddef.tar.gz",
+  "hardware": "NVIDIA A100-SXM4-40GB",
+  "accuracy": {
+    "marker": "accepted",
+    "status": "passed",
+    "revision": "6ddddeff15dea3acd90c11597a9a93507ddb8cbf",
+    "settings": {
+      "vtsfm": {
+        "forecast_execution": "compile",
+        "triton_default_fp_fusion": "0",
+        "toto_compile_scope": "whole",
+        "toto_fast_unit_scaling": true,
+        "parity_timeout_s": 900
+      }
+    },
+    "cases": [
+      {
+        "name": "assetops-c128-h32-b7-window-0",
+        "cells": 2016,
+        "failed_cells": 0,
+        "max_abs_error": 1.1444091796875e-05,
+        "max_error_to_tolerance_ratio": 0.009094719101746012,
+        "failed_coordinates": [],
+        "native_sha256": "712df7b94d229d42f8df6425c472efec3d55958d695a5b09d185728316bb6896",
+        "payload_sha256": "811e661009c2ee2d62033b88d53ea5633358a9ed153ec0dd588f4f2dc070c7e3",
+        "observed": 224,
+        "native": {
+          "MAE": 0.6395197946080771,
+          "MASE": 0.8296742491551921,
+          "SQL": 0.7137621711881129
+        },
+        "served": {
+          "MAE": 0.6395195106212148,
+          "MASE": 0.8296741126539063,
+          "SQL": 0.7137620264396318
+        }
+      },
+      {
+        "name": "assetops-c128-h32-b7-window-1",
+        "cells": 2016,
+        "failed_cells": 0,
+        "max_abs_error": 7.62939453125e-06,
+        "max_error_to_tolerance_ratio": 0.002259203118061775,
+        "failed_coordinates": [],
+        "native_sha256": "39d79f463e18cbb81802b5cf62221840fff08d38da7113c787c77a44d779d5cc",
+        "payload_sha256": "34cc61db72f727b674de58773302b28aecfd0fe7c79cd8174b7a8143262dfb87",
+        "observed": 224,
+        "native": {
+          "MAE": 1.245720080385841,
+          "MASE": 3.927854662686768,
+          "SQL": 3.7203402699373522
+        },
+        "served": {
+          "MAE": 1.2457200588490065,
+          "MASE": 3.9278546469879414,
+          "SQL": 3.7203402771229883
+        }
+      },
+      {
+        "name": "assetops-c128-h32-b7-window-2",
+        "cells": 2016,
+        "failed_cells": 0,
+        "max_abs_error": 1.1444091796875e-05,
+        "max_error_to_tolerance_ratio": 0.015202922913959437,
+        "failed_coordinates": [],
+        "native_sha256": "a584da93c026e5fbf552f089d1772a5321f481e50e84e7092910bae9d0f220de",
+        "payload_sha256": "58a6e046e94ca3ae8ebc3bf58b9429d8ca6199ed4d4eea44158dba667f123d09",
+        "observed": 224,
+        "native": {
+          "MAE": 0.5578823144018575,
+          "MASE": 0.35182724824352213,
+          "SQL": 0.32576897270990396
+        },
+        "served": {
+          "MAE": 0.5578824250296748,
+          "MASE": 0.3518272500389536,
+          "SQL": 0.3257689318586511
+        }
+      },
+      {
+        "name": "assetops-c128-h32-b7-window-3",
+        "cells": 2016,
+        "failed_cells": 0,
+        "max_abs_error": 7.62939453125e-06,
+        "max_error_to_tolerance_ratio": 0.014462827992246229,
+        "failed_coordinates": [],
+        "native_sha256": "31a73713fbb30268f7f374b6d47520d6d012d0bca6e4429a576bbe6f7ae5333c",
+        "payload_sha256": "0e8b456f0f446647661aae9d6d9840777f12636d2ff20c1fd65f1503ae610a6f",
+        "observed": 224,
+        "native": {
+          "MAE": 0.28849166620368905,
+          "MASE": 0.5148503462983288,
+          "SQL": 0.4393225596709612
+        },
+        "served": {
+          "MAE": 0.28849162041504833,
+          "MASE": 0.5148502692495097,
+          "SQL": 0.4393224896634275
+        }
+      },
+      {
+        "name": "assetops-c128-h32-b7-window-4",
+        "cells": 2016,
+        "failed_cells": 0,
+        "max_abs_error": 1.1444091796875e-05,
+        "max_error_to_tolerance_ratio": 0.015042693478352097,
+        "failed_coordinates": [],
+        "native_sha256": "5f3013a6f49de185137136aa27c68ca43a671ced8f161e10c36fba64fe936add",
+        "payload_sha256": "d0124d2756b91085313f1bf4f53ee64c3bb9accda6188e40db826379b2ca57fb",
+        "observed": 224,
+        "native": {
+          "MAE": 0.320390001978272,
+          "MASE": 0.5683033045890941,
+          "SQL": 0.45599174806003023
+        },
+        "served": {
+          "MAE": 0.32039001417277696,
+          "MASE": 0.5683033328961602,
+          "SQL": 0.45599175652400153
+        }
+      }
+    ],
+    "observed_targets": 1120,
+    "cells": 10080,
+    "failed_cells": 0,
+    "maximum_absolute_error": 1.1444091796875e-05,
+    "arithmetic_mean_of_per_case_scores": {
+      "native": {
+        "MAE": 0.6104007715155473,
+        "MASE": 1.238501962194581,
+        "SQL": 1.131037144313272
+      },
+      "served": {
+        "MAE": 0.6104007258175442,
+        "MASE": 1.2385019223652942,
+        "SQL": 1.13103709632174
+      }
+    }
+  },
+  "five-signals-eager": {
+    "marker": "failed",
+    "status": "failed",
+    "revision": "6ddddeff15dea3acd90c11597a9a93507ddb8cbf",
+    "settings": {
+      "vtsfm": {
+        "forecast_execution": "eager",
+        "triton_default_fp_fusion": "0",
+        "toto_compile_scope": "core",
+        "toto_fast_unit_scaling": true,
+        "parity_timeout_s": 180
+      }
+    },
+    "cases": [
+      {
+        "name": "signal-chiller_6-supply_temperature-c512-h96",
+        "cells": 4320,
+        "failed_cells": 0,
+        "max_abs_error": 4.57763671875e-05,
+        "max_error_to_tolerance_ratio": 0.03324007980036612,
+        "failed_coordinates": [],
+        "native_sha256": "18e300b25edccf608d7a9b1df4c501ae664caf71f4fc05c2c8ddc7b5de03648d",
+        "payload_sha256": "79440125b5211a714bad32a84f376a55b8b6a33bc9e9f8395744d27fe7b86106",
+        "observed": 480,
+        "native": {
+          "MAE": 33.30621675309299,
+          "MASE": 0.8033253479159793,
+          "SQL": 0.5864677357005956
+        },
+        "served": {
+          "MAE": 33.30621695972242,
+          "MASE": 0.8033253531403363,
+          "SQL": 0.5864677317007396
+        }
+      },
+      {
+        "name": "signal-chiller_6-condenser_water_flow-c512-h96",
+        "cells": 4320,
+        "failed_cells": 69,
+        "max_abs_error": 0.00390625,
+        "max_error_to_tolerance_ratio": 12.972972972972972,
+        "failed_coordinates": [
+          [
+            1,
+            0.3,
+            0
+          ],
+          [
+            1,
+            0.3,
+            16
+          ],
+          [
+            1,
+            0.3,
+            37
+          ],
+          [
+            1,
+            0.3,
+            40
+          ],
+          [
+            1,
+            0.3,
+            43
+          ],
+          [
+            1,
+            0.3,
+            53
+          ],
+          [
+            1,
+            0.3,
+            55
+          ],
+          [
+            1,
+            0.3,
+            64
+          ],
+          [
+            1,
+            0.4,
+            0
+          ],
+          [
+            1,
+            0.4,
+            1
+          ],
+          [
+            1,
+            0.4,
+            4
+          ],
+          [
+            1,
+            0.4,
+            5
+          ],
+          [
+            1,
+            0.4,
+            6
+          ],
+          [
+            1,
+            0.4,
+            8
+          ],
+          [
+            1,
+            0.4,
+            9
+          ],
+          [
+            1,
+            0.4,
+            10
+          ],
+          [
+            1,
+            0.4,
+            12
+          ],
+          [
+            1,
+            0.4,
+            13
+          ],
+          [
+            1,
+            0.4,
+            14
+          ],
+          [
+            1,
+            0.4,
+            16
+          ],
+          [
+            1,
+            0.4,
+            19
+          ],
+          [
+            1,
+            0.4,
+            20
+          ],
+          [
+            1,
+            0.4,
+            21
+          ],
+          [
+            1,
+            0.4,
+            26
+          ],
+          [
+            1,
+            0.4,
+            27
+          ],
+          [
+            1,
+            0.4,
+            28
+          ],
+          [
+            1,
+            0.4,
+            29
+          ],
+          [
+            1,
+            0.4,
+            31
+          ],
+          [
+            1,
+            0.4,
+            32
+          ],
+          [
+            1,
+            0.4,
+            34
+          ],
+          [
+            1,
+            0.4,
+            37
+          ],
+          [
+            1,
+            0.4,
+            41
+          ],
+          [
+            1,
+            0.4,
+            42
+          ],
+          [
+            1,
+            0.4,
+            43
+          ],
+          [
+            1,
+            0.4,
+            52
+          ],
+          [
+            1,
+            0.4,
+            53
+          ],
+          [
+            1,
+            0.4,
+            54
+          ],
+          [
+            1,
+            0.4,
+            56
+          ],
+          [
+            1,
+            0.4,
+            60
+          ],
+          [
+            1,
+            0.4,
+            62
+          ],
+          [
+            1,
+            0.4,
+            63
+          ],
+          [
+            1,
+            0.4,
+            81
+          ],
+          [
+            1,
+            0.4,
+            83
+          ],
+          [
+            1,
+            0.4,
+            88
+          ],
+          [
+            1,
+            0.4,
+            92
+          ],
+          [
+            1,
+            0.5,
+            3
+          ],
+          [
+            1,
+            0.5,
+            7
+          ],
+          [
+            1,
+            0.5,
+            9
+          ],
+          [
+            1,
+            0.5,
+            10
+          ],
+          [
+            1,
+            0.5,
+            17
+          ],
+          [
+            1,
+            0.5,
+            18
+          ],
+          [
+            1,
+            0.5,
+            24
+          ],
+          [
+            1,
+            0.5,
+            38
+          ],
+          [
+            1,
+            0.5,
+            39
+          ],
+          [
+            1,
+            0.5,
+            41
+          ],
+          [
+            1,
+            0.5,
+            52
+          ],
+          [
+            1,
+            0.5,
+            54
+          ],
+          [
+            1,
+            0.5,
+            66
+          ],
+          [
+            1,
+            0.5,
+            67
+          ],
+          [
+            1,
+            0.5,
+            74
+          ],
+          [
+            1,
+            0.5,
+            76
+          ],
+          [
+            1,
+            0.5,
+            81
+          ],
+          [
+            1,
+            0.5,
+            86
+          ],
+          [
+            1,
+            0.5,
+            90
+          ],
+          [
+            1,
+            0.5,
+            91
+          ],
+          [
+            1,
+            0.6,
+            27
+          ],
+          [
+            1,
+            0.6,
+            49
+          ],
+          [
+            1,
+            0.6,
+            75
+          ],
+          [
+            1,
+            0.6,
+            84
+          ]
+        ],
+        "native_sha256": "9b0b1b0ebdfd4b7e40da3c5c6f22c4c05b04b98b616566ac05274ebb00fee759",
+        "payload_sha256": "f3e5ccbf67da54170d8589b6420f17ddccf45797364c7d1c3620bd9905d0d771",
+        "observed": 480,
+        "native": {
+          "MAE": 580.4250485181884,
+          "MASE": 0.3348780913716224,
+          "SQL": 0.28421813067181184
+        },
+        "served": {
+          "MAE": 580.4250301092939,
+          "MASE": 0.334878084344751,
+          "SQL": 0.28421812946373876
+        }
+      },
+      {
+        "name": "signal-metro_pump_1-oil_temperature-c512-h96",
+        "cells": 4320,
+        "failed_cells": 0,
+        "max_abs_error": 1.52587890625e-05,
+        "max_error_to_tolerance_ratio": 0.002654955128603371,
+        "failed_coordinates": [],
+        "native_sha256": "0a6b10d7fdd64e9798364f9abd1530f68790269abaa06499990eb82acc55dae3",
+        "payload_sha256": "eb9d6a57881cce14caffb6e0cd3358ba58f7b8e0cce2a6796ea629f64160af39",
+        "observed": 480,
+        "native": {
+          "MAE": 2.5118131959101846,
+          "MASE": 0.8790575475719695,
+          "SQL": 0.6341740033306306
+        },
+        "served": {
+          "MAE": 2.51181332306676,
+          "MASE": 0.8790575860207938,
+          "SQL": 0.6341740203911381
+        }
+      },
+      {
+        "name": "signal-metro_pump_1-motor_current-c512-h96",
+        "cells": 4320,
+        "failed_cells": 0,
+        "max_abs_error": 4.410743713378906e-06,
+        "max_error_to_tolerance_ratio": 0.033946125114040625,
+        "failed_coordinates": [],
+        "native_sha256": "f5ff9c9c5d128c6ca6cd34f8f5379b80ca909b4647e325a439b612422e5bb5a1",
+        "payload_sha256": "38fec75845c49512a46f5a2f36b9e07f6f4f84ffa068abd897e756827ffb80bb",
+        "observed": 480,
+        "native": {
+          "MAE": 0.9255304103947128,
+          "MASE": 1.1215589269384987,
+          "SQL": 0.9166243834323413
+        },
+        "served": {
+          "MAE": 0.9255304049309538,
+          "MASE": 1.1215588837201014,
+          "SQL": 0.9166243710213882
+        }
+      },
+      {
+        "name": "signal-hydraulic_pump_1-ps1_pressure-c512-h96",
+        "cells": 4320,
+        "failed_cells": 0,
+        "max_abs_error": 3.0517578125e-05,
+        "max_error_to_tolerance_ratio": 0.0019073002489217556,
+        "failed_coordinates": [],
+        "native_sha256": "314d7bf20634f5ffbf53f78a506e57191dc37a40e38c2c42158fcd5744f74cfe",
+        "payload_sha256": "22673e547400606167b0e4b75153d250fbc5760113d3273db02b45eafef59b5a",
+        "observed": 480,
+        "native": {
+          "MAE": 1.6531729393106835,
+          "MASE": 6.450933725933565,
+          "SQL": 4.351673254715238
+        },
+        "served": {
+          "MAE": 1.6531727485758203,
+          "MASE": 6.450932444443849,
+          "SQL": 4.351673128513775
+        }
+      }
+    ],
+    "observed_targets": 2400,
+    "cells": 21600,
+    "failed_cells": 69,
+    "maximum_absolute_error": 0.00390625,
+    "arithmetic_mean_of_per_case_scores": {
+      "native": {
+        "MAE": 123.76435636337939,
+        "MASE": 1.917950727946327,
+        "SQL": 1.3546315015701236
+      },
+      "served": {
+        "MAE": 123.76435270911796,
+        "MASE": 1.9179504703339663,
+        "SQL": 1.354631476218156
+      }
+    }
+  },
+  "five-signals-whole": {
+    "marker": "failed",
+    "status": "failed",
+    "revision": "6ddddeff15dea3acd90c11597a9a93507ddb8cbf",
+    "settings": {
+      "vtsfm": {
+        "forecast_execution": "compile",
+        "triton_default_fp_fusion": "0",
+        "toto_compile_scope": "whole",
+        "toto_fast_unit_scaling": true,
+        "parity_timeout_s": 900
+      }
+    },
+    "cases": [
+      {
+        "name": "signal-chiller_6-supply_temperature-c512-h96",
+        "cells": 4320,
+        "failed_cells": 0,
+        "max_abs_error": 5.340576171875e-05,
+        "max_error_to_tolerance_ratio": 0.028889054886315376,
+        "failed_coordinates": [],
+        "native_sha256": "18e300b25edccf608d7a9b1df4c501ae664caf71f4fc05c2c8ddc7b5de03648d",
+        "payload_sha256": "79440125b5211a714bad32a84f376a55b8b6a33bc9e9f8395744d27fe7b86106",
+        "observed": 480,
+        "native": {
+          "MAE": 33.30621675309299,
+          "MASE": 0.8033253479159793,
+          "SQL": 0.5864677357005956
+        },
+        "served": {
+          "MAE": 33.306216641830986,
+          "MASE": 0.8033253438278759,
+          "SQL": 0.5864677312051985
+        }
+      },
+      {
+        "name": "signal-chiller_6-condenser_water_flow-c512-h96",
+        "cells": 4320,
+        "failed_cells": 110,
+        "max_abs_error": 0.00390625,
+        "max_error_to_tolerance_ratio": 6.963788300835654,
+        "failed_coordinates": [
+          [
+            1,
+            0.2,
+            40
+          ],
+          [
+            1,
+            0.2,
+            44
+          ],
+          [
+            1,
+            0.2,
+            68
+          ],
+          [
+            1,
+            0.3,
+            0
+          ],
+          [
+            1,
+            0.3,
+            26
+          ],
+          [
+            1,
+            0.3,
+            32
+          ],
+          [
+            1,
+            0.3,
+            33
+          ],
+          [
+            1,
+            0.3,
+            36
+          ],
+          [
+            1,
+            0.3,
+            38
+          ],
+          [
+            1,
+            0.3,
+            39
+          ],
+          [
+            1,
+            0.3,
+            40
+          ],
+          [
+            1,
+            0.3,
+            44
+          ],
+          [
+            1,
+            0.3,
+            45
+          ],
+          [
+            1,
+            0.3,
+            46
+          ],
+          [
+            1,
+            0.3,
+            52
+          ],
+          [
+            1,
+            0.3,
+            54
+          ],
+          [
+            1,
+            0.3,
+            57
+          ],
+          [
+            1,
+            0.3,
+            58
+          ],
+          [
+            1,
+            0.3,
+            61
+          ],
+          [
+            1,
+            0.3,
+            62
+          ],
+          [
+            1,
+            0.3,
+            64
+          ],
+          [
+            1,
+            0.3,
+            84
+          ],
+          [
+            1,
+            0.3,
+            85
+          ],
+          [
+            1,
+            0.3,
+            95
+          ],
+          [
+            1,
+            0.4,
+            0
+          ],
+          [
+            1,
+            0.4,
+            1
+          ],
+          [
+            1,
+            0.4,
+            4
+          ],
+          [
+            1,
+            0.4,
+            6
+          ],
+          [
+            1,
+            0.4,
+            8
+          ],
+          [
+            1,
+            0.4,
+            12
+          ],
+          [
+            1,
+            0.4,
+            13
+          ],
+          [
+            1,
+            0.4,
+            14
+          ],
+          [
+            1,
+            0.4,
+            16
+          ],
+          [
+            1,
+            0.4,
+            17
+          ],
+          [
+            1,
+            0.4,
+            19
+          ],
+          [
+            1,
+            0.4,
+            20
+          ],
+          [
+            1,
+            0.4,
+            21
+          ],
+          [
+            1,
+            0.4,
+            22
+          ],
+          [
+            1,
+            0.4,
+            25
+          ],
+          [
+            1,
+            0.4,
+            26
+          ],
+          [
+            1,
+            0.4,
+            28
+          ],
+          [
+            1,
+            0.4,
+            29
+          ],
+          [
+            1,
+            0.4,
+            30
+          ],
+          [
+            1,
+            0.4,
+            31
+          ],
+          [
+            1,
+            0.4,
+            33
+          ],
+          [
+            1,
+            0.4,
+            34
+          ],
+          [
+            1,
+            0.4,
+            36
+          ],
+          [
+            1,
+            0.4,
+            38
+          ],
+          [
+            1,
+            0.4,
+            40
+          ],
+          [
+            1,
+            0.4,
+            42
+          ],
+          [
+            1,
+            0.4,
+            48
+          ],
+          [
+            1,
+            0.4,
+            50
+          ],
+          [
+            1,
+            0.4,
+            56
+          ],
+          [
+            1,
+            0.4,
+            57
+          ],
+          [
+            1,
+            0.4,
+            58
+          ],
+          [
+            1,
+            0.4,
+            63
+          ],
+          [
+            1,
+            0.4,
+            64
+          ],
+          [
+            1,
+            0.4,
+            66
+          ],
+          [
+            1,
+            0.4,
+            69
+          ],
+          [
+            1,
+            0.4,
+            70
+          ],
+          [
+            1,
+            0.4,
+            72
+          ],
+          [
+            1,
+            0.4,
+            77
+          ],
+          [
+            1,
+            0.4,
+            78
+          ],
+          [
+            1,
+            0.4,
+            79
+          ],
+          [
+            1,
+            0.4,
+            81
+          ],
+          [
+            1,
+            0.4,
+            83
+          ],
+          [
+            1,
+            0.4,
+            85
+          ],
+          [
+            1,
+            0.4,
+            89
+          ],
+          [
+            1,
+            0.4,
+            90
+          ],
+          [
+            1,
+            0.4,
+            94
+          ],
+          [
+            1,
+            0.4,
+            95
+          ],
+          [
+            1,
+            0.5,
+            3
+          ],
+          [
+            1,
+            0.5,
+            5
+          ],
+          [
+            1,
+            0.5,
+            7
+          ],
+          [
+            1,
+            0.5,
+            9
+          ],
+          [
+            1,
+            0.5,
+            10
+          ],
+          [
+            1,
+            0.5,
+            20
+          ],
+          [
+            1,
+            0.5,
+            21
+          ],
+          [
+            1,
+            0.5,
+            33
+          ],
+          [
+            1,
+            0.5,
+            34
+          ],
+          [
+            1,
+            0.5,
+            38
+          ],
+          [
+            1,
+            0.5,
+            39
+          ],
+          [
+            1,
+            0.5,
+            41
+          ],
+          [
+            1,
+            0.5,
+            52
+          ],
+          [
+            1,
+            0.5,
+            66
+          ],
+          [
+            1,
+            0.5,
+            67
+          ],
+          [
+            1,
+            0.5,
+            70
+          ],
+          [
+            1,
+            0.5,
+            73
+          ],
+          [
+            1,
+            0.5,
+            74
+          ],
+          [
+            1,
+            0.5,
+            78
+          ],
+          [
+            1,
+            0.5,
+            80
+          ],
+          [
+            1,
+            0.5,
+            81
+          ],
+          [
+            1,
+            0.5,
+            82
+          ],
+          [
+            1,
+            0.5,
+            83
+          ],
+          [
+            1,
+            0.5,
+            84
+          ],
+          [
+            1,
+            0.5,
+            85
+          ],
+          [
+            1,
+            0.5,
+            86
+          ],
+          [
+            1,
+            0.5,
+            87
+          ],
+          [
+            1,
+            0.5,
+            88
+          ],
+          [
+            1,
+            0.5,
+            89
+          ],
+          [
+            1,
+            0.5,
+            92
+          ],
+          [
+            1,
+            0.5,
+            93
+          ],
+          [
+            1,
+            0.6,
+            23
+          ],
+          [
+            1,
+            0.6,
+            39
+          ],
+          [
+            1,
+            0.6,
+            49
+          ],
+          [
+            1,
+            0.6,
+            53
+          ],
+          [
+            1,
+            0.6,
+            55
+          ],
+          [
+            1,
+            0.6,
+            79
+          ],
+          [
+            1,
+            0.6,
+            86
+          ],
+          [
+            1,
+            0.7,
+            89
+          ]
+        ],
+        "native_sha256": "9b0b1b0ebdfd4b7e40da3c5c6f22c4c05b04b98b616566ac05274ebb00fee759",
+        "payload_sha256": "f3e5ccbf67da54170d8589b6420f17ddccf45797364c7d1c3620bd9905d0d771",
+        "observed": 480,
+        "native": {
+          "MAE": 580.4250485181884,
+          "MASE": 0.3348780913716224,
+          "SQL": 0.28421813067181184
+        },
+        "served": {
+          "MAE": 580.4250736863738,
+          "MASE": 0.3348780939684949,
+          "SQL": 0.28421813057289314
+        }
+      },
+      {
+        "name": "signal-metro_pump_1-oil_temperature-c512-h96",
+        "cells": 4320,
+        "failed_cells": 0,
+        "max_abs_error": 1.52587890625e-05,
+        "max_error_to_tolerance_ratio": 0.003113520353160386,
+        "failed_coordinates": [],
+        "native_sha256": "0a6b10d7fdd64e9798364f9abd1530f68790269abaa06499990eb82acc55dae3",
+        "payload_sha256": "eb9d6a57881cce14caffb6e0cd3358ba58f7b8e0cce2a6796ea629f64160af39",
+        "observed": 480,
+        "native": {
+          "MAE": 2.5118131959101846,
+          "MASE": 0.8790575475719695,
+          "SQL": 0.6341740033306306
+        },
+        "served": {
+          "MAE": 2.5118118528188558,
+          "MASE": 0.8790570904728122,
+          "SQL": 0.6341737669274361
+        }
+      },
+      {
+        "name": "signal-metro_pump_1-motor_current-c512-h96",
+        "cells": 4320,
+        "failed_cells": 0,
+        "max_abs_error": 7.152557373046875e-06,
+        "max_error_to_tolerance_ratio": 0.033353666985532555,
+        "failed_coordinates": [],
+        "native_sha256": "f5ff9c9c5d128c6ca6cd34f8f5379b80ca909b4647e325a439b612422e5bb5a1",
+        "payload_sha256": "38fec75845c49512a46f5a2f36b9e07f6f4f84ffa068abd897e756827ffb80bb",
+        "observed": 480,
+        "native": {
+          "MAE": 0.9255304103947128,
+          "MASE": 1.1215589269384987,
+          "SQL": 0.9166243834323413
+        },
+        "served": {
+          "MAE": 0.9255305502172755,
+          "MASE": 1.1215593703749647,
+          "SQL": 0.9166245365781321
+        }
+      },
+      {
+        "name": "signal-hydraulic_pump_1-ps1_pressure-c512-h96",
+        "cells": 4320,
+        "failed_cells": 0,
+        "max_abs_error": 4.57763671875e-05,
+        "max_error_to_tolerance_ratio": 0.0028609503733826335,
+        "failed_coordinates": [],
+        "native_sha256": "314d7bf20634f5ffbf53f78a506e57191dc37a40e38c2c42158fcd5744f74cfe",
+        "payload_sha256": "22673e547400606167b0e4b75153d250fbc5760113d3273db02b45eafef59b5a",
+        "observed": 480,
+        "native": {
+          "MAE": 1.6531729393106835,
+          "MASE": 6.450933725933565,
+          "SQL": 4.351673254715238
+        },
+        "served": {
+          "MAE": 1.653172843943252,
+          "MASE": 6.450933678894877,
+          "SQL": 4.351673552388767
+        }
+      }
+    ],
+    "observed_targets": 2400,
+    "cells": 21600,
+    "failed_cells": 110,
+    "maximum_absolute_error": 0.00390625,
+    "arithmetic_mean_of_per_case_scores": {
+      "native": {
+        "MAE": 123.76435636337939,
+        "MASE": 1.917950727946327,
+        "SQL": 1.3546315015701236
+      },
+      "served": {
+        "MAE": 123.76436111503683,
+        "MASE": 1.917950715507805,
+        "SQL": 1.3546315435344853
+      }
+    }
+  },
+  "five_signal_paired_failures": {
+    "signal-chiller_6-supply_temperature-c512-h96": {
+      "eager_only": 0,
+      "both": 0,
+      "whole_only": 0
+    },
+    "signal-chiller_6-condenser_water_flow-c512-h96": {
+      "eager_only": 30,
+      "both": 39,
+      "whole_only": 71
+    },
+    "signal-metro_pump_1-oil_temperature-c512-h96": {
+      "eager_only": 0,
+      "both": 0,
+      "whole_only": 0
+    },
+    "signal-metro_pump_1-motor_current-c512-h96": {
+      "eager_only": 0,
+      "both": 0,
+      "whole_only": 0
+    },
+    "signal-hydraulic_pump_1-ps1_pressure-c512-h96": {
+      "eager_only": 0,
+      "both": 0,
+      "whole_only": 0
+    }
+  },
+  "direct_replay": {
+    "eager": {
+      "unmodified_capture_status": "failed",
+      "status": "passed",
+      "shape": [
+        1,
+        2048,
+        96
+      ],
+      "boundary": "single serialized in-process tensor forecast; copy input and mask, execute or replay, own output clone, synchronize",
+      "tensor_scale_control": "experiment-only: multiply tensor scale without a Python truth test; all other scaling unchanged",
+      "capture_s": 0.08991912199417129,
+      "allocated_before_capture": 1371765248,
+      "allocated_after_capture": 1380288512,
+      "ordinary": {
+        "count": 100,
+        "p50_ms": 80.35848499275744,
+        "p95_ms": 85.09415911248652
+      },
+      "graph": {
+        "count": 100,
+        "p50_ms": 11.153906016261317,
+        "p95_ms": 14.113506552530453
+      }
+    },
+    "whole": {
+      "unmodified_capture_status": "failed",
+      "status": "passed",
+      "shape": [
+        1,
+        2048,
+        96
+      ],
+      "boundary": "single serialized in-process tensor forecast; copy input and mask, execute or replay, own output clone, synchronize",
+      "tensor_scale_control": "experiment-only: multiply tensor scale without a Python truth test; all other scaling unchanged",
+      "capture_s": 0.023267037991899997,
+      "allocated_before_capture": 1371765248,
+      "allocated_after_capture": 1380288512,
+      "ordinary": {
+        "count": 100,
+        "p50_ms": 11.573891984880902,
+        "p95_ms": 12.492976376961451
+      },
+      "graph": {
+        "count": 100,
+        "p50_ms": 6.794126995373517,
+        "p95_ms": 6.849899697408546
+      }
+    }
+  }
+}

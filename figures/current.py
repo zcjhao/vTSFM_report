@@ -37,9 +37,9 @@ def toto():
     ]
     modes = [('eager', 'Eager', BASE), ('core', 'Guarded compile', SECOND),
              ('whole', 'Whole-forecast compile', OPT)]
-    fig = figure('Toto runs faster when the full forecast is compiled',
+    fig = figure('Toto whole-forecast compilation lifts warm throughput',
                  'A100   ·   MetroPT   ·   Horizon 96   ·   One server slot   ·   Eager FP32 and two compile scopes',
-                 '2,400 timed HTTP forecasts across six fresh servers. First use of each shape took 21–32 s with whole-forecast compilation.')
+                 '2,400 timed requests. Whole compile first use: 21–32 s per shape. Chiller stress test: 69 eager and 110 whole-compile parity misses out of 4,320.')
     axes = fig.subplots(1, 2)
     fig.subplots_adjust(left=.085, right=.975, top=.73, bottom=.28, wspace=.32)
     for ax, key, unit in zip(axes, ('req_per_s', 'p95_ms'), ('Throughput (requests/s)', 'End-to-end p95 latency (ms)'), strict=True):
@@ -64,7 +64,7 @@ def attention():
     failures = data['horizon_1024']['fused_parity']['failures_by_64_step_block']
     assert sum(failures) == data['horizon_1024']['fused_parity']['outside']
     fig = figure('Moirai attention depends on forecast horizon',
-                 'A100   ·   Same eight MetroPT histories, 7,168 observations each   ·   One outstanding HTTP request',
+                 'A100   ·   Eight tiled MetroPT histories, context 7,168   ·   One outstanding HTTP request',
                  'H96: 200 requests per mode, two orders. H1024: 450 of 73,728 values exceeded native tolerance; all belonged to one series.')
     left, right = fig.subplots(1, 2)
     fig.subplots_adjust(left=.09, right=.965, top=.715, bottom=.20, wspace=.34)
@@ -115,7 +115,29 @@ def blocks():
     export(fig,'09-moirai-block-scheduling')
 
 
+
+def replay():
+    from render import canvas, horizontal, legend
+    control=json.loads((ROOT/'data/toto-qualification-a100.json').read_text())['direct_replay']
+    modes=['eager','whole']
+    labels=['Eager','Whole-forecast\ncompile']
+    fig,(a,b)=canvas('Toto CUDA graph replay at a fixed shape',
+        'A100   ·   Direct tensor calls   ·   B1/C2048/H96   ·   Experimental device-side unit scaling',
+        '100 calls per cell in four blocks. Both paths copy inputs, clone outputs and synchronize. Each graph held an additional 8.13 MiB on the GPU.',wide=True)
+    for key in modes:
+        cell=control[key]
+        assert cell['status']=='passed' and cell['unmodified_capture_status']=='failed'
+        assert all(cell[arm]['count']==100 for arm in ['ordinary','graph'])
+    horizontal(a,labels,[[control[m][arm]['p95_ms'] for m in modes] for arm in ['ordinary','graph']],
+               [BASE,OPT],'p95 latency (ms)','Steady-state tensor call',fmt='.1f')
+    horizontal(b,labels,[[1000*control[m]['capture_s'] for m in modes]],[OPT],
+               'One-time capture (ms)','CUDA graph setup',fmt='.1f')
+    legend(fig,['Ordinary invocation','CUDA graph'],[BASE,OPT])
+    export(fig,'13-toto-direct-graph')
+
+
 if __name__ == '__main__':
     toto()
     attention()
     blocks()
+    replay()
