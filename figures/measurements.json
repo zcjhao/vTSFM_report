@@ -1,0 +1,148 @@
+{
+  "serving": {
+    "source": "https://github.com/vinli0921/vTSFM/issues/51",
+    "revision": "9cde2f134ec0e1575f661bae33d8dc5915b6be16",
+    "hardware": "A100-SXM4-40GB",
+    "models": [
+      "TimesFM",
+      "Toto",
+      "Moirai"
+    ],
+    "fastapi_p95_ms": [
+      171.6,
+      132.1,
+      42.3
+    ],
+    "vtsfm_p95_ms": [
+      98.6,
+      127.9,
+      46.4
+    ],
+    "fastapi_slo_offer": [
+      null,
+      null,
+      20
+    ],
+    "vtsfm_slo_offer": [
+      40,
+      20,
+      80
+    ]
+  },
+  "graph": {
+    "source": "https://github.com/vinli0921/vTSFM/issues/17",
+    "hardware": "A100-SXM4-40GB",
+    "layouts": [
+      "Dense KV",
+      "Paged KV"
+    ],
+    "http_mean_ms": {
+      "Eager": [
+        335.89,
+        368.27
+      ],
+      "CUDA graph": [
+        71.64,
+        67.7
+      ]
+    },
+    "peak_nvml_mib": {
+      "Eager": [
+        2079,
+        2081
+      ],
+      "CUDA graph": [
+        2231,
+        2221
+      ]
+    }
+  },
+  "attention": {
+    "source": "https://github.com/vinli0921/vTSFM/issues/24#issuecomment-6935265127",
+    "revision": "bd1eca2",
+    "hardware": "RTX A6000",
+    "shape": "B8/C7168/H1024",
+    "modes": [
+      "Upstream",
+      "Univariate SDPA"
+    ],
+    "http_latency_ms": [
+      2783.9,
+      1512.6
+    ],
+    "peak_allocated_gib": [
+      1.83,
+      0.72
+    ]
+  },
+  "compile": {
+    "source": "https://github.com/vinli0921/vTSFM/issues/17",
+    "pilot_source": "https://github.com/vinli0921/vTSFM/issues/17#issuecomment-6968665132",
+    "shape": "B1/C2048/H96",
+    "a100_revision": "b3b74b0",
+    "a100_eager_p50": [
+      75.35,
+      75.39
+    ],
+    "a100_guarded_p50": [
+      93.43,
+      94.93
+    ],
+    "a6000_eager_p50": 79.5,
+    "a6000_whole_p50": 12.1
+  },
+  "blocks": {
+    "source": "https://github.com/vinli0921/vTSFM/issues/51#combined-timesfm-h1024-results-from-prs-80-and-81",
+    "final_source": "https://github.com/vinli0921/vTSFM/pull/83",
+    "hardware": "A100-SXM4-40GB",
+    "earlier": {
+      "Original block mode": 7.359,
+      "+ Fused KV update": 8.223,
+      "+ Grouped prefills": 10.061,
+      "Whole forecast": 10.403
+    },
+    "later": {
+      "Whole forecast": 10.395,
+      "Packed block mode": 10.377,
+      "+ Final-only assembly": 10.558
+    }
+  },
+  "toto_runtime": {
+    "source": "https://github.com/vinli0921/vTSFM/pull/94",
+    "hardware": "A100-SXM4-40GB",
+    "reference": "8110e34",
+    "shape": "B4/C128/H96",
+    "clients": [
+      1,
+      4
+    ],
+    "control": {
+      "rps": [
+        8.208604265985466,
+        8.56659780047634
+      ],
+      "p95_ms": [
+        123.59974954833888,
+        488.82504405282816
+      ],
+      "completed": [
+        200,
+        200
+      ]
+    },
+    "candidate": {
+      "rps": [
+        13.759900428007729,
+        14.659902972890247
+      ],
+      "p95_ms": [
+        73.98878954973043,
+        285.2815758513316
+      ],
+      "completed": [
+        200,
+        200
+      ]
+    }
+  }
+}
